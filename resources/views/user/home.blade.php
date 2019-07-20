@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<h1 class="title-blue" style="width:100% !important; border-radius:0px !important; font-size:26px; background:linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);">Benvenuto, {{ Auth::user()->name }}</h1> 
 <div class="contenitore3">
+ 
     <div class="home">
         <div class="home__main">
             {{-- TITOLO PAGINA --}}
@@ -9,7 +11,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h4>Benvenuto, {{ Auth::user()->name }}</h4>
+
                             <hr>
                         </div>
                        

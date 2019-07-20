@@ -7,6 +7,10 @@
    -webkit-animation: spin 2s linear infinite; /* Safari */
    animation: spin 2s linear infinite;
  }
+
+ .navbar-laravel {
+  box-shadow: 0 2px 12px rgba(79, 79, 79, 0.19);
+}
  .services {
    display:flex;
    flex-direction: column;
