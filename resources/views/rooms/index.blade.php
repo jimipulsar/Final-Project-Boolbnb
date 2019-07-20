@@ -3,12 +3,14 @@
   {{-- Sponsorized Apartments --}}
     @isset($sponsorships)
         <div class="sponsorships">
+        <h1 class="title-blue" style="width:100% !important; border-radius:0px !important; font-size:26px; background:linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);">Appartamenti in evidenza</h1>
             <div class="sponsorships___main">
                 <div class="sponsorships__main__title">
                     <div class="container">
+                    
                         <div class="row">
                             <div class="col-12">
-                                <h1>In evidenza</h1>
+                            
                             </div>
                         </div>
                     </div>
