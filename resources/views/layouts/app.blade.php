@@ -64,7 +64,7 @@
                         <li><a class="nav-link" href="{{ route('users.index') }}"><i class="fas fa-users"></i> Utenti</a></li>
 
                         <li><a class="nav-link" href="{{ route('roles.index') }}"><i class="fas fa-user-tag"></i> Ruoli</a></li>
-
+                    
                         <li><a class="nav-link" href="{{ route('rooms.index') }}"><i class="fas fa-building"></i> Appartamenti</a></li>
 
 

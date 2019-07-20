@@ -50,11 +50,11 @@ class Handler extends ExceptionHandler
 
     if ($exception instanceof \Spatie\Permission\Exceptions\UnauthorizedException) {
 
-        return response()->json("Non hai il permesso per accedere a questa pagina. Devi prima autenticarti per verificare i tuoi permessi.");
+        abort(403, 'Non hai l\'autorizzazione per effettuare questa operazione.');
 
     }
 
     return parent::render($request, $exception);
-
+    // return redirect()->route('search.search')->with('danger','Non hai il permesso per effettuare questa operazione');
 }
 }

@@ -36,7 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('users','UserController');
     Route::resource('rooms','RoomController');
 });
-
+Route::resource('rooms','RoomController');
 Route::middleware('auth:api')->group( function () {
 	Route::resource('room', 'Api\RoomController');
 });

@@ -74,6 +74,12 @@ class RoleTableSeeder extends Seeder
             'rooms-delete',
 
          ];
+
+         $permissions_UI = [
+
+            'rooms-list',
+
+         ];
         foreach ($permissions_root as $permission) {
             $role_admin_root->givePermissionTo($permission);
        }
@@ -83,5 +89,8 @@ class RoleTableSeeder extends Seeder
        foreach ($permissions_UPR as $permission) {
             $role_UPR->givePermissionTo($permission);
        }
+       foreach ($permissions_UI as $permission) {
+         $role_UI->givePermissionTo($permission);
+    }
     }
 }
