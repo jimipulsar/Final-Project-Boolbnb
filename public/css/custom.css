@@ -1,0 +1,280 @@
+.preloader {
+  border: 16px solid #f3f3f3;
+   border-radius: 50%;
+   border-top: 16px solid #3498db;
+   width: 120px;
+   height: 120px;
+   -webkit-animation: spin 2s linear infinite; /* Safari */
+   animation: spin 2s linear infinite;
+ }
+ .services {
+   display:flex;
+   flex-direction: column;
+   justify-content: flex-start;
+ }
+ .alert-success {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ /* Safari */
+ @-webkit-keyframes spin {
+   0% { -webkit-transform: rotate(0deg); }
+   100% { -webkit-transform: rotate(360deg); }
+ }
+ 
+ @keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+ }
+ 
+ .testocentrale {
+   font-size:18px;
+   color:#000;
+   margin-bottom: 35px;
+   margin-top: 17px;
+   text-align: center;
+ }
+ 
+ th {
+   cursor: pointer;
+ }
+ .classeform {
+   display:flex;
+   width:100%;
+   flex-direction:row;
+   align-items:center;
+   justify-content: center;
+ }
+ 
+ #text-btn {
+    color: #003342;
+    font-size: 17px;
+    float: left;
+    margin-top: 9px;
+  }
+ 
+  #featured {
+    background: url('/storage/images/cardwallpaper.png') !important;
+    padding: 31px;
+    box-shadow: 3px 5px 7px #c8c8c8;
+    border-radius: 6px;
+    filter: brightness(1.1);
+  }
+  .cont {
+    position: relative;
+    float: left;
+  }
+ .centro {
+   display:flex;
+   justify-content: center;
+   flex-direction: row;
+   margin: 50px;
+ }
+ .text-absolute {
+   position: relative;
+   bottom: 26px;
+   left: 15px;
+   z-index: 999;
+   color: #fff;
+   text-shadow: 0px 2px 3px #000;
+   margin-top: -10px;
+   font-size: 18px;
+ }
+ 
+   #text-right {
+     float: right;
+     margin-top: 9px;
+     box-shadow: 0px 0px 12px #363636;
+   }
+ 
+  .py-5{
+    width:100%;
+    background-image: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);
+    box-shadow: 0px 2px 23px #000;
+  }
+ 
+  .img-responsive {
+    box-shadow:0px 0px 12px #000;
+    border-radius:8px;
+  }
+ 
+ #img-shadow {
+   box-shadow: 0px 4px 12px #6a6868;
+   border-radius: 8px;
+   position: relative;
+ }
+ 
+  .bottom-left {
+    left: 29px;
+    color: #06444d;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+  }
+ 
+ #navbarmenu {
+  background-size: cover;
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  border-bottom: 1px solid #fff !important;
+ }
+ 
+  #slide {
+   background-size: cover !important;
+   background:url('http://localhost:8000/storage/images/vacanze.jpg');
+   /* background-image: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #267681 75%); */
+   height: 450px;
+   box-shadow: 0px 7px 12px #c8c8c8;
+   margin-bottom: 56px;
+  }
+ 
+ 
+ .colonna {
+   width: 85%;
+   position: relative;
+   margin: auto;
+   display: block;
+   margin-top: 50px;
+ }
+ 
+ .titolo {
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   flex-direction: row;
+   width: 100%;
+ }
+ 
+ 
+ .contenitore2 {
+   display: flex;
+   justify-content: flex-start;
+   flex-direction: column;
+ }
+ 
+
+ 
+ .contenitore4 {
+  margin: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: normal;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background: #ffffffa3;
+  padding: 32px;
+  border-radius: 6px;
+}
+
+ .contenitore3 {
+   margin: auto;
+   display: flex;
+   justify-content: flex-start;
+   align-items: normal;
+   flex-direction: column;
+   width: 80%;
+   margin-top: 40px;
+   margin-bottom: 40px;
+ }
+ 
+ .pull-left {
+   display: inline-block;
+   position: relative;
+   margin: auto;
+ }
+
+ .card {
+  box-shadow: 2px 2px 6px #dedddd;
+}
+.immagine{
+  display:block;
+}
+ 
+ .pull-right {
+    display: block;
+    position: relative;
+    float: right;
+ }
+ .text-left {
+  display: block;
+  position: relative;
+  float: left;
+  height: 26px;
+}
+ .sinistra {
+   float:left;
+   position: relative;
+   margin-bottom: 25px;
+ }
+ .btn-default {
+   color: #15707A;
+ }
+
+ .fade-in {
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+  -moz-animation: fadeIn ease 2s;
+  -o-animation: fadeIn ease 2s;
+  -ms-animation: fadeIn ease 2s;
+}
+
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+/* The style below is just for the appearance of the example div */
+
+.style {
+  position:relative;
+}
+.style p {
+position: relative;
+}
+ 
