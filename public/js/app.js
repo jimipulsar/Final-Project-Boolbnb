@@ -100660,7 +100660,7 @@
             var href = window.location.href.split('/');
             var host = href[2];
             var idApartment = href[href.length - 2];
-            var urlApi = '/api/v1/apartment/';
+            var urlApi = '/api/v1/room/';
             var url = 'http://' + host + urlApi + idApartment + '/';
             var vm = this; //per ogni chart faccio una chiamata alla api
   
@@ -100824,12 +100824,12 @@
             this.radius = params.get("radius");
           }
   
-          this.beds = params.get("beds") || 1;
-          this.rooms = params.get("rooms") || 1;
-          this.services = params.getAll("service");
+          this.beds = params.get("n_beds") || 1;
+          this.rooms = params.get("n_rooms") || 1;
+          this.services = params.getAll("service_id");
           this.href = window.location.href.split('/');
           this.host = this.href[2];
-          this.urlApi = '/api/v1/apartments/';
+          this.urlApi = '/api/v1/room/';
           console.log('mounted');
         }
       });

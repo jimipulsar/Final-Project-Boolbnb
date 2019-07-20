@@ -91,16 +91,19 @@
                 {{-- /APPARTAMENTI SPONSORIZZATI --}}
                 {{-- APPARTAMENTI MENO VISITATI --}}
             @else
+             <br>
                 <div class="home__main__sponsorized-rooms">
                     <div class="container">
                         <div class="row">
                             <div class="col-8 d-flex align-items-center">
-                                <h2 class="title-blue">Appartamenti meno visitati</h2>
+                                <h3 class="title-blue">Appartamenti meno visitati</h3>
                             </div>
                             <div class="col-4 text-right d-flex justify-content-end align-items-center">
                                 <a href="{{route('rooms.index', Auth::user()->id)}}" class="btn btn-default"><i class="fas fa-home" title="home"></i> Tutti gli appartamenti</a>
                             </div>
                         </div>
+                        <hr>
+                        <br>
                         {{-- Cards --}}
                         <div class="row">
                             @foreach($suggestion_sponsorships as $room_to_sponsor)
@@ -112,9 +115,9 @@
                                 <div class="col-lg-4 col-sm-6 mb-4">
                                     <div class="card sponsor-adv">
                                         <div class="card__content">
-                                            <i class="fas fa-certificate"></i>
-                                            <h1>Sponsorizza</h1>
-                                            <h2>Ottieni più visite con soli</h2>
+                                            
+                                            <h1 style="font-size:22px;"> <i class="fas fa-certificate"></i> Sponsorizza</h1>
+                                            <h4>Ottieni più visite con soli</h4>
                                             <ul>
                                                 <li>2,99 € per 24 ore</li>
                                                 <li>5.99 € per 72 ore</li>
@@ -134,12 +137,15 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-8 d-flex align-items-center">
-                            <h2 class="title-blue">Ultimi Appartamenti</h2>
+                            <h3 class="title-blue">Ultimi Appartamenti</h2>
                         </div>
+                        <hr>
                         <div class="col-4 text-right d-flex justify-content-end align-items-center">
                             <a href="{{route('rooms.index', Auth::user()->id)}}" class="btn btn-default"><i class="fas fa-home" title="home"></i> Tutti gli appartamenti</a>
                         </div>
                     </div>
+                    <hr>
+                    <br>
                         {{-- Cards --}}
                         <div class="row">
                             @foreach($rooms as $room)

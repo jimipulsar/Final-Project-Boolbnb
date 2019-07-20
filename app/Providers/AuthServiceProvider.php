@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Providers;
+use Laravel\Passport\Passport;
 
 use Illuminate\Contracts\Auth\Access\Gate as GateContract;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
@@ -22,16 +23,17 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-     public function boot(GateContract $gate)
-       {
-           parent::registerPolicies($gate);
+    public function boot()
+    {
+        $this->registerPolicies();
 
-           $gate->define('update-post', function ($user, $post) {
-                   return $user->id === $post->user_id;
-           });
-
-           $gate->define('mod-update-post', function ($user, $subreddit) {
-               return $user->id === $subreddit->user_id;
-           });
-       }
+        Passport::routes();
+    
+        Passport::tokensExpireIn(now()->addDays(15));
+    
+        Passport::refreshTokensExpireIn(now()->addDays(30));
+    
+        Passport::personalAccessTokensExpireIn(now()->addMonths(6));
+        
+    }
 }

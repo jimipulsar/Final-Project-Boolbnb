@@ -37,6 +37,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('rooms','RoomController');
 });
 
+Route::middleware('auth:api')->group( function () {
+	Route::resource('room', 'Api\RoomController');
+});
+
 Route::any('/search','SearchController@search');
 Route::any('/rooms/search','RoomController@search');
 Route::get('autocomplete', 'SearchController@autocomplete')->name('autocomplete');

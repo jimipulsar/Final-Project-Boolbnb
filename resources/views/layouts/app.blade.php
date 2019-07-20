@@ -69,7 +69,7 @@
 
 
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> <i class="fas fa-user-circle"></i>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
@@ -77,7 +77,7 @@
                                     <a class="dropdown-item" href="{{ route('profile') }}"><i class="fas fa-user"></i>
                                         Il mio profilo
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('rooms.stanze') }}"><i class="fas fa-user"></i>
+                                    <a class="dropdown-item" href="{{ route('rooms.stanze') }}"><i class="fas fa-bed"></i>
                                         Gestisci appartamenti
                                     </a>
                                    

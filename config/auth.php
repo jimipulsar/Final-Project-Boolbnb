@@ -69,6 +69,17 @@ return [
             'driver' => 'eloquent',
             'model' => App\User::class,
         ],
+        'guards' => [
+            'web' => [
+                'driver' => 'session',
+                'provider' => 'users',
+            ],
+            'api' => [
+                'driver' => 'passport',
+                'provider' => 'users',
+            ],
+            
+        ],
 
         // 'users' => [
         //     'driver' => 'database',

@@ -46,6 +46,7 @@
    flex-direction:row;
    align-items:center;
    justify-content: center;
+   background: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);
  }
  
  #text-btn {
@@ -213,6 +214,17 @@
  .btn-default {
    color: #15707A;
  }
+ .alert-sponsorship {
+   color: #fff;
+   background: #006c7e;
+   padding: 9px;
+   display: flex;
+   justify-content: center;
+   border-radius: 6px 6px 0px 0px;
+ }
+ .dropdown-item {
+  color: #08615c;
+}
 
  .fade-in {
   animation: fadeIn ease 2s;
@@ -259,6 +271,38 @@
   }
 }
 
+.sponsor-adv {
+ background: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);
+ color: white;
+ display: flex;
+ padding: 15px;
+ justify-content: center;
+ flex-direction: column;
+ border: 3px solid #00566e;
+ box-shadow: 3px 4px 12px #a9a9a9;
+}
+.btn-sponsor, a:hover {
+  background: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);
+  color: #fff !important;
+}
+
+.pull-icons {
+  display:flex;
+  margin:auto;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-blue {
+  color: white;
+  background: #005462;
+  padding: 14px;
+  border-radius: 6px;
+  margin-bottom: 22px;
+  font-size: 20px;
+}
+
 @-ms-keyframes fadeIn {
   0% {
     opacity:0;
@@ -266,6 +310,10 @@
   100% {
     opacity:1;
   }
+}
+
+a, a:hover {
+  color:#15707c;
 }
 
 /* The style below is just for the appearance of the example div */
