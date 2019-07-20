@@ -30,6 +30,17 @@ import { Bar, Line } from 'vue-chartjs';
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+
+// const files = require.context('./', true, /\.vue$/i);
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
+
 Vue.component('card', require('./components/CardComponent.vue').default);
 Vue.component('service-component', require('./components/ServiceComponent.vue').default);
 
@@ -60,8 +71,8 @@ $(document).ready(function () {
     });
 
     //apartment add geocomplete
-    $('#address_room').geocomplete({
-        details: "#address_room-complete",
+    $('#address_apartment').geocomplete({
+        details: "#address_apartment-complete",
         detailsAttribute: "data-geo"
     }).bind("geocode:result", function(event, result){
         //prendo i dati dai campi input compilati da geocomplete e li inserisco nei div
@@ -123,9 +134,9 @@ $(document).ready(function () {
                 fillData(year) {
                     let href = window.location.href.split('/');
                     let host = href[2];
-                    let idRoom = href[href.length - 2];
-                    let urlApi = '/api/v1/room/';
-                    let url = 'http://' + host + urlApi + idRoom + '/';
+                    let idApartment = href[href.length - 2];
+                    let urlApi = '/api/v1/apartment/';
+                    let url = 'http://' + host + urlApi + idApartment + '/';
 
                     let vm = this;
                     //per ogni chart faccio una chiamata alla api
@@ -196,10 +207,10 @@ $(document).ready(function () {
                     latitude: '',
                     longitude: '',
                     radius: '',
-                    n_baths: '',
-                    n_rooms: '',
+                    beds: '',
+                    rooms: '',
                     services: '',
-                    n_rooms: [],
+                    rooms: [],
                     page: 1,
                     infiniteId: +new Date(),
                     formNoValidated: true,
@@ -225,14 +236,14 @@ $(document).ready(function () {
                             longitude: this.longitude,
                             radius: this.radius * 1000,
                             services: this.services,
-                            n_beds: this.n_beds,
-                            n_rooms: this.n_rooms,
+                            beds: this.beds,
+                            rooms: this.rooms,
                         }
                     }).then((response) => {
                         if( Object.keys(response.data.result).length){
                             this.page += 1;
                             $.each(response.data.result, function(key, value) {
-                                vuethis.rooms.push(value);
+                                vuethis.apartments.push(value);
                             });
                             $state.loaded();
                         } else{
@@ -262,8 +273,8 @@ $(document).ready(function () {
                         this.latitude = submitEvent.target.elements.latitude.value;
                         this.longitude = submitEvent.target.elements.longitude.value;
                         this.radius = submitEvent.target.elements.radius.value;
-                        this.n_beds = submitEvent.target.elements.n_beds.value;
-                        this.n_rooms = submitEvent.target.elements.n_rooms.value;
+                        this.beds = submitEvent.target.elements.beds.value;
+                        this.rooms = submitEvent.target.elements.rooms.value;
                         let services = submitEvent.target.elements.service;
 
                         let arrServices = [];
@@ -276,7 +287,7 @@ $(document).ready(function () {
                         this.services = arrServices;
 
                         this.page = 1;
-                        this.rooms = [];
+                        this.apartments = [];
                         this.infiniteId += 1;
                     }
                     this.formValidate(true);
@@ -294,13 +305,13 @@ $(document).ready(function () {
                 } else {
                      this.radius = params.get("radius");
                 }
-                this.n_baths = params.get("n_baths") || 1;
-                this.n_rooms = params.get("n_rooms") || 1;
+                this.beds = params.get("beds") || 1;
+                this.rooms = params.get("rooms") || 1;
                 this.services = params.getAll("service");
 
                 this.href = window.location.href.split('/');
                 this.host = this.href[2];
-                this.urlApi = '/api/v1/rooms/';
+                this.urlApi = '/api/v1/apartments/';
                 console.log('mounted');
             },
         });
@@ -322,7 +333,7 @@ $(document).ready(function () {
         let token = $container.data('token');
         let url = $container.data('action');
         let sponsorship = $container.data('sponsorship');
-        let roomId = $container.data('room');
+        let apartmentId = $container.data('apartment');
         dropin.create({
             authorization: token,
             container: '#dropin-container',
@@ -340,7 +351,7 @@ $(document).ready(function () {
                         data: {
                             payload: nonce,
                             sponsorship: sponsorship,
-                            roomId: roomId
+                            apartmentId: apartmentId
                         }
                     }).then((response) => {
                         if(response.data.success === true){

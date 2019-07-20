@@ -20,7 +20,7 @@ Route::post('/sendemail/send', 'SendEmailController@send');
 Route::auth();
 Auth::routes();
 
-Route::group(['middleware' => ['auth']], function() {
+Route::middleware('auth')->group(function () {
     Route::get('/home', 'HomeController@index')->name('profile');
     Route::any('/allrooms', 'HomeController@stanze')->name('rooms.stanze');
     Route::get('/message', 'MessageController@create')->name('message.create');
