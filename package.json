@@ -13,7 +13,6 @@
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
     "cross-env": "^5.2.0",
-    "geocomplete": "^1.7.0",
     "jquery": "^3.4.1",
     "laravel-mix": "^4.0.16",
     "lodash": "^4.17.5",
@@ -21,20 +20,11 @@
     "resolve-url-loader": "^2.3.1",
     "sass": "^1.22.3",
     "sass-loader": "^7.1.0",
-    "vue": "^2.6.10",
-    "vue-axios": "^2.1.4",
-    "vue-chartjs": "^3.4.2",
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
-    "@vue/cli": "^3.9.3",
-    "bootstrap4-toggle": "^3.5.0",
-    "braintree-web": "^2.32.1",
-    "braintree-web-drop-in": "^1.17.0",
-    "chart.js": "^2.8.0",
-    "geocomplete": "^1.7.0",
     "places.js": "^1.16.4",
-    "vue-infinite-loading": "^2.4.4"
+    "vuejs": "^3.0.1"
   },
   "name": "boolbnb-master",
   "description": "Progetto Finale Corso Boolean  # boolbnb-updated",
@@ -45,13 +35,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimipulsar/"
+    "url": "git+https://github.com/jimipulsar/boolbnb-updated.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jimipulsar/"
+    "url": "https://github.com/jimipulsar/boolbnb-updated/issues"
   },
-  "homepage": "https://github.com/jimipulsar/"
+  "homepage": "https://github.com/jimipulsar/boolbnb-updated#readme"
 }

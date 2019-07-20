@@ -145,7 +145,6 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        Laravel\Passport\PassportServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
         Illuminate\Auth\AuthServiceProvider::class,
