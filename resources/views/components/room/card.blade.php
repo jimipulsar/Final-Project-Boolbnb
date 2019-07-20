@@ -17,7 +17,7 @@
             <p class="text-left" style=""><i class="far fa-check-circle" style="color:#15707c;font-size:18px;"> </i> {{$room->service_id}} &nbsp; &nbsp;<i class="fas fa-bed" style="color:#15707c;font-size:18px;"></i> Posti Letto:  {{$room->n_beds}} &nbsp; </p>
             </div>
             <div class="card-title">
-                <a href="{{route('rooms.show', $room->id)}}" {{(Route::currentRouteName() === 'rooms.search') ? 'target="_blank"' : null}} ><h3 style="font-size:20px;" class="mt-0 mb-1 text-center" style="">{{$room->title}}</h3></a>
+                <a href="{{route('rooms.show', $room->id)}}" {{(Route::currentRouteName() === 'rooms.search') ? 'target="_blank"' : null}} ><h3 style="font-size:20px; color:#15707c;" class="mt-0 mb-1 text-center" style="">{{$room->title}}</h3></a>
             </div>
             <div class="card__info">
                 <p style="text-align:center" class="card__price"><strong>{{$room->price}} € </strong>a persona</p>

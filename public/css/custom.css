@@ -284,6 +284,7 @@
 .btn-sponsor, a:hover {
   background: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);
   color: #fff !important;
+  border-radius:6px;
 }
 
 .pull-icons {
@@ -312,9 +313,9 @@
   }
 }
 
-a, a:hover {
+/* a, a:hover {
   color:#15707c;
-}
+} */
 
 /* The style below is just for the appearance of the example div */
 
