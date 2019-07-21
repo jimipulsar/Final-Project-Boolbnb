@@ -11,6 +11,9 @@
  .navbar-laravel {
   box-shadow: 0 2px 12px rgba(79, 79, 79, 0.19);
 }
+.imglogo:hover {
+  background:none !important;
+}
  .services {
    display:flex;
    flex-direction: column;
@@ -285,10 +288,16 @@
  border: 3px solid #00566e;
  box-shadow: 3px 4px 12px #a9a9a9;
 }
-.btn-sponsor, a:hover {
+.btn-sponsor {
   background: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%);
   color: #fff !important;
   border-radius:6px;
+}
+
+.nav-link:hover, .dropdown-item:hover, .btn-default:hover {
+  background: linear-gradient(141deg, #002f3c 0%, #0e5a76 51%, #107e8e 75%) !important;
+  color: #fff !important;
+  border-radius:4px;
 }
 
 .pull-icons {

@@ -32,8 +32,8 @@ class RoomController extends Controller
 
     public function __construct()
     {
-         $this->middleware(['auth', 'verified']);
-          $this->middleware('permission:rooms-list');
+        //  $this->middleware(['auth', 'verified']);
+        //   $this->middleware('permission:rooms-list');
          $this->middleware('permission:rooms-create', ['only' => ['create','store']]);
          $this->middleware('permission:rooms-edit', ['only' => ['edit','update']]);
          $this->middleware('permission:rooms-delete', ['only' => ['destroy']]);
