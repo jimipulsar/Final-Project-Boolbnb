@@ -34,7 +34,9 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+ 
   </div>
+
     <div class="row">
     <table class="table table-striped">
             <tr>
@@ -81,7 +83,9 @@
     </div>
     <div class="centro">
     {{$rooms->links()}}
+
     </div>
-        </div>
+
+            </div>
 
 @endsection

@@ -20,7 +20,7 @@ Route::post('/sendemail/send', 'SendEmailController@send');
 Route::auth();
 Auth::routes();
 
-Route::middleware('auth')->group(function () {
+Route::group(['middleware' => 'role:Admin Root'], function () {
     Route::get('/home', 'HomeController@index')->name('profile');
     Route::any('/allrooms', 'HomeController@stanze')->name('rooms.stanze');
     Route::get('/message', 'MessageController@create')->name('message.create');
@@ -36,10 +36,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('users','UserController');
     Route::resource('rooms','RoomController');
 });
-Route::resource('rooms','RoomController');
-Route::middleware('auth:api')->group( function () {
-	Route::resource('room', 'Api\RoomController');
-});
+
 
 Route::any('/search','SearchController@search');
 Route::any('/rooms/search','RoomController@search');

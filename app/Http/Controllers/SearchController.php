@@ -26,7 +26,7 @@ public function search(Request $request)
 
       $q = Input::get( 'q' );
 
-      $rooms = Room::where ( 'service_id', 'ilike', '%' . $q . '%' )->orWhere('title', 'ilike', '%' . $q . '%')->paginate(10);
+      $rooms = Room::where ( 'service_id', 'LIKE', '%' . $q . '%' )->orWhere('title', 'LIKE', '%' . $q . '%')->paginate(10);
       $rooms->appends(['search' => $q]);
 
       if(count($rooms) > 0)
