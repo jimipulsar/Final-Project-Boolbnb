@@ -40,10 +40,10 @@
 
     <div class="col-xs-12 col-sm-12 col-md-12">
 
-        <div class="form-group">
+        <div class="card">
 
             <strong>Permessi:</strong>
-
+            <div class="col-sm-12">
             @if(!empty($rolePermissions))
 
                 @foreach($rolePermissions as $v)
@@ -55,7 +55,7 @@
             @endif
 
         </div>
-
+        </div>
     </div>
 
 </div>
