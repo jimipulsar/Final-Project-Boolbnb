@@ -9,7 +9,7 @@
           <a class="btn btn-success" href="{{ route('roles.create') }}"> Crea nuovo ruolo</a>
           @endcan
           <hr>
-        </div>
+        
 
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -21,13 +21,14 @@
             <p>{{ $message }}</p>
         </div>
     @endif
+</div>
   <div class="col-sm-12">
 <table class="table table-striped">
   <tr>
      <th>ID</th>
      <th>Nome</th>
      <th>Permessi</th>
-     <th  class="text-center">Azioni</th>
+     <th  class="text-center" style="width:400px;">Azioni</th>
   </tr>
     @foreach ($roles as $role)
     <tr>
@@ -58,7 +59,7 @@
 </div>
 </div>
 
-
+</div>
 
 
 @endsection
