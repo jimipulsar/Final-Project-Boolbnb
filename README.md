@@ -1,24 +1,24 @@
-
 # BoolBnB
-BoolBnB è il progetto finale del corso Boolean Careers Full Stack Web Developer ideato per poter utilizzare tutte le tecnologie e metodologie studiate durante il corso.
+BoolBnB is the final project of the Boolean Careers Full Stack Web Developer course designed to be able to use all the technologies and methodologies studied during the course.
 
-# Dettagli
-BoolBnB è una applicazione per trovare e gestire l’affitto di appartamenti.
-Attraverso BoolBnB gli utenti registrati possono inserire le informazioni degli appartamenti che vogliono mettere in affitto, inoltre possono decidere di pagare per sponsorizzare gli annunci per fare in modo che siano in evidenza rispetto a quelli non sponsorizzati.
-Gli utenti interessati ad un appartamento, utilizzando i filtri di una apposita pagina di ricerca, vedono una lista di possibili appartamenti e cliccando su ognuno possono vedere una pagina di dettaglio.
-Una volta trovato l’appartamento desiderato, l’utente interessato può contattare l’utente proprietario tramite messaggio.
+# Details
+BoolBnB is an application to find and manage apartment rentals.
+Through BoolBnB, registered users can enter the information of the apartments they want to rent, and they can also decide to pay to sponsor the ads to make them stand out from the non-sponsored ones.
+Users interested in an apartment, using the filters of a specific search page, see a list of possible apartments and by clicking on each one they can see a detail page.
+Once the desired apartment has been found, the interested user can contact the owner user via message.
 
-# Tecnologie usate
-Laravel 5.8 , VueJs, Jquery.
+# Technologies used
+Laravel 5.8, VueJs, Jquery.
 
 
-# Requisiti Tecnici richiesti da brief
-1. **Client-side Validation**: tutti gli input inseriti dell’utente devono essere controllati client-side (oltre che server-side)
-3. **Sistema di Pagamento**: il sistema di pagamento da utilizzare è braintree (https://www.braintreepayments.com/ ).
-4. **Sito Responsive**: il sito deve essere correttamente visibile da desktop e da smartphone
-5. **Gestione Ruoli**: Creazione di determinati ruoli assegnati con relativi permessi:
-1	Admin Root	Admin Root	
-2	Utente Proprietario	Utente Proprietario	
-3	Utente Proprietario Registrato	Utente Proprietario Registrato	
-4	Utente Proprietario Registrato con Appartamento		
-5	Utente Interessato	Utente Interessato
+# Technical requirements required by brief
+1. ** Client-side Validation **: all user inputs must be checked client-side (as well as server-side)
+3. ** Payment System **: the payment system to use is braintree (https://www.braintreepayments.com/).
+4. ** Responsive site **: the site must be correctly visible from desktop and smartphone
+5. ** Roles Management **: Creation of certain assigned roles with relative permissions:
+1 Admin Root Admin Root
+2 Owner User Owner User
+3 Registered Owner User Registered Owner User
+4 Owner User Registered with Apartment
+5 Interested User Interested User
+
